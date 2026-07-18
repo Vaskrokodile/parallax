@@ -1,0 +1,12 @@
+{
+  "name": "parallel-agents",
+  "displayName": "Parallel Agents",
+  "version": "0.1.0",
+  "description": "Decompose tasks into research + implement subtasks and run them in parallel with shared blackboard coordination. Provides the /parallel-agents:run skill, researcher + implementer subagents, and the parallel_agents MCP server.",
+  "author": {
+    "name": "kzrr"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Vaskrokodile/parallax",
+  "keywords": ["parallel", "subagents", "coordination", "blackboard", "mcp"]
+}

@@ -1,0 +1,17 @@
+# Codex project config for the parallel-agents workflow.
+# Place this at <repo>/.codex/config.toml (project-scoped) or merge into
+# ~/.codex/config.toml (global). The ChatGPT desktop app, Codex CLI, and IDE
+# extension all share this configuration.
+
+[agents]
+# Concurrent open subagent threads. Raise if you fan out to many tasks.
+max_threads = 6
+# Root session is depth 0; children are depth 1. Keep at 1 unless you need
+# recursive delegation (increases token usage and latency).
+max_depth = 1
+
+[mcp_servers.parallel_agents]
+# Uses the published npm package — no clone or build needed.
+command = "npx"
+args = ["-y", "parallax-mcp"]
+env = { PARALLEL_AGENTS_STATE_DIR = ".parallel-agents" }

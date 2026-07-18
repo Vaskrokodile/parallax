@@ -1,0 +1,53 @@
+{
+  "name": "parallax-mcp",
+  "version": "0.1.0",
+  "description": "Blackboard MCP server for coordinating parallel subagents across Claude Code and Codex.",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "bin": {
+    "parallax-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "smoke": "node scripts/smoke.js",
+    "prepublishOnly": "tsc"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude-code",
+    "codex",
+    "subagents",
+    "parallel",
+    "orchestration",
+    "blackboard",
+    "coordination"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vaskrokodile/parallax.git"
+  },
+  "homepage": "https://github.com/Vaskrokodile/parallax",
+  "bugs": {
+    "url": "https://github.com/Vaskrokodile/parallax/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "proper-lockfile": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/proper-lockfile": "^4.1.4",
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,0 +1,4 @@
+node_modules/
+dist/
+.parallel-agents/
+*.log
