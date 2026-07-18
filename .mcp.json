@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "parallel_agents": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@parallaxmcp/parallax-mcp"
+      ],
+      "env": {}
+    }
+  }
+}

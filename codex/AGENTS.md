@@ -4,7 +4,7 @@
 
 This project ships a parallel-agents workflow. For any task that splits into
 independent pieces (multi-file features, refactors, research-then-implement
-work), invoke the `/parallel` skill instead of doing the work inline.
+work), invoke the `$parallel` skill instead of doing the work inline.
 
 The workflow uses the `parallel_agents` MCP server (a shared blackboard at
 `.parallel-agents/state.json`) and two custom subagents defined in
@@ -15,7 +15,7 @@ The workflow uses the `parallel_agents` MCP server (a shared blackboard at
   researcher findings, registers artifacts.
 
 Both coordinate through the blackboard so they don't duplicate work or clobber
-each other's files. The `/parallel` skill decomposes the task, publishes the
+each other's files. The `$parallel` skill decomposes the task, publishes the
 plan, spawns the subagents in parallel, and synthesizes results.
 
 When a task is small enough to be one agent, delegate directly to `researcher`

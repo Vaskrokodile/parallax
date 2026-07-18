@@ -1,0 +1,11 @@
+
+# --- @parallaxmcp/parallax-mcp (managed by setup.sh) ---
+[agents]
+max_threads = 6
+max_depth = 1
+
+[mcp_servers.parallel_agents]
+command = "npx"
+args = ["-y", "@parallaxmcp/parallax-mcp"]
+env = { PARALLEL_AGENTS_STATE_DIR = ".parallel-agents" }
+default_tools_approval_mode = "approve"

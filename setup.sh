@@ -145,6 +145,7 @@ max_depth = 1
 command = "$MCP_COMMAND"
 args = [$(echo "$MCP_ARGS" | sed 's/\([^ ]*\)/"\1"/g' | sed 's/ /, /g')]
 env = { PARALLEL_AGENTS_STATE_DIR = ".parallel-agents" }
+default_tools_approval_mode = "approve"
 EOF
     echo "  Appended MCP config to: $CONFIG"
   else
