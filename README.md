@@ -74,7 +74,7 @@ in one installable unit:
 
 ```bash
 # from a clone, test locally:
-claude --plugin-dir /path/to/parallax-mcp/claude-code-plugin
+claude --plugin-dir /path/to/parallax/claude-code-plugin
 
 # or once published to a marketplace:
 /plugin install parallel-agents@<marketplace>
@@ -94,7 +94,7 @@ cp -R claude-code/.claude  /your-project/.claude
 
 Then register the MCP server (uses the npm package, no build needed):
 ```bash
-claude mcp add parallel_agents -- npx -y parallax-mcp
+claude mcp add parallel_agents -- npx -y @parallaxmcp/parallax-mcp
 ```
 
 **Codex:**
@@ -104,20 +104,20 @@ cp -R codex/.agents /your-project/.agents
 cp codex/AGENTS.md  /your-project/AGENTS.md
 ```
 
-The `.codex/config.toml` already references `npx -y parallax-mcp`.
+The `.codex/config.toml` already references `npx -y @parallaxmcp/parallax-mcp`.
 
 In all cases, add `.parallel-agents/` to your project's `.gitignore`.
 
 ## Repository layout
 
 ```
-parallax-mcp/
+parallax/
 ├── mcp-server/                  # the portable blackboard MCP server (npm package)
 │   ├── src/
 │   │   ├── store.ts             # file-backed atomic coordination store
 │   │   └── index.ts             # MCP server: 10 tools
 │   ├── scripts/smoke.js         # end-to-end + cross-process race test
-│   └── package.json             # published as `parallax-mcp` on npm
+│   └── package.json             # published as `@parallaxmcp/parallax-mcp` on npm
 ├── claude-code/                 # manual pack for Claude Code
 │   ├── .claude/
 │   │   ├── agents/              # researcher.md, implementer.md
@@ -204,7 +204,7 @@ npm run smoke      # verifies tools + cross-process claim race (should print OK)
 
 ## Publishing
 
-The MCP server is published to npm as `parallax-mcp`. To publish a new
+The MCP server is published to npm as `@parallaxmcp/parallax-mcp`. To publish a new
 version:
 
 ```bash

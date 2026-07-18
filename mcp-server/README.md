@@ -26,7 +26,7 @@ To use standalone in any MCP client, add to your MCP config:
   "mcpServers": {
     "parallel_agents": {
       "command": "npx",
-      "args": ["-y", "parallax-mcp"],
+      "args": ["-y", "@parallaxmcp/parallax-mcp"],
       "env": { "PARALLEL_AGENTS_STATE_DIR": ".parallel-agents" }
     }
   }

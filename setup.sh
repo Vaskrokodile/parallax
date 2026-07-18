@@ -2,7 +2,7 @@
 # setup.sh — install the parallel-agents workflow for Claude Code and/or Codex.
 #
 # Detects which tools are installed and wires up:
-#   - MCP server registration (uses `npx -y parallax-mcp`, no build needed)
+#   - MCP server registration (uses `npx -y @parallaxmcp/parallax-mcp`, no build needed)
 #   - Subagent profiles (researcher + implementer)
 #   - The /parallel orchestrator skill
 #
@@ -39,8 +39,8 @@ done
 # --- Determine MCP server command -------------------------------------------
 if [ "$USE_NPX" = true ]; then
   MCP_COMMAND="npx"
-  MCP_ARGS='-y parallax-mcp'
-  MCP_DESC="npm package (npx -y parallax-mcp)"
+  MCP_ARGS='-y @parallaxmcp/parallax-mcp'
+  MCP_DESC="npm package (npx -y @parallaxmcp/parallax-mcp)"
 else
   LOCAL_BUILD="$SCRIPT_DIR/mcp-server/dist/index.js"
   if [ ! -f "$LOCAL_BUILD" ]; then
@@ -136,7 +136,7 @@ install_codex() {
   if ! grep -q 'mcp_servers.parallel_agents' "$CONFIG"; then
     cat >> "$CONFIG" <<EOF
 
-# --- parallax-mcp (managed by setup.sh) ---
+# --- @parallaxmcp/parallax-mcp (managed by setup.sh) ---
 [agents]
 max_threads = 6
 max_depth = 1

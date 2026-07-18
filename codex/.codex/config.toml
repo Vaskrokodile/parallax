@@ -13,5 +13,5 @@ max_depth = 1
 [mcp_servers.parallel_agents]
 # Uses the published npm package — no clone or build needed.
 command = "npx"
-args = ["-y", "parallax-mcp"]
+args = ["-y", "@parallaxmcp/parallax-mcp"]
 env = { PARALLEL_AGENTS_STATE_DIR = ".parallel-agents" }

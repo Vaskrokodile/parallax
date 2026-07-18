@@ -1,6 +1,9 @@
 {
-  "name": "parallax-mcp",
+  "name": "@parallaxmcp/parallax-mcp",
   "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Blackboard MCP server for coordinating parallel subagents across Claude Code and Codex.",
   "type": "commonjs",
   "main": "dist/index.js",
@@ -32,7 +35,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Vaskrokodile/parallax.git"
+    "url": "git+https://github.com/Vaskrokodile/parallax.git"
   },
   "homepage": "https://github.com/Vaskrokodile/parallax",
   "bugs": {

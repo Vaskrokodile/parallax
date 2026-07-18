@@ -3,7 +3,7 @@
 A self-contained Claude Code plugin that bundles everything needed for the
 parallel-agents workflow:
 
-- **MCP server**: `parallel_agents` (via `.mcp.json`, uses `npx -y parallax-mcp`)
+- **MCP server**: `parallel_agents` (via `.mcp.json`, uses `npx -y @parallaxmcp/parallax-mcp`)
 - **Subagents**: `researcher` (read-only research) and `implementer` (scoped code changes)
 - **Skill**: `/parallel-agents:run` — the orchestrator that decomposes, spawns, and synthesizes
 
@@ -12,7 +12,7 @@ parallel-agents workflow:
 ### Local (test from a clone)
 
 ```bash
-claude --plugin-dir /path/to/parallax-mcp/claude-code-plugin
+claude --plugin-dir /path/to/parallax/claude-code-plugin
 ```
 
 Or add it to your project's plugin config and restart Claude Code.
@@ -31,7 +31,7 @@ Once published to a marketplace:
 claude-code-plugin/
 ├── .claude-plugin/
 │   └── plugin.json          # manifest
-├── .mcp.json                # MCP server registration (npx -y parallax-mcp)
+├── .mcp.json                # MCP server registration (npx -y @parallaxmcp/parallax-mcp)
 ├── agents/
 │   ├── researcher.md        # read-only research subagent
 │   └── implementer.md       # scoped implementation subagent
